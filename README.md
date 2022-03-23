@@ -250,7 +250,7 @@ In this case a journal contains daily entries that are typically several paragra
 
 So here is what I want:
 
-[work log screenshot](images/work-log-screenshot.png)
+![work log screenshot](images/work-log-screenshot.png)
 
 And here is the code that needed to make this work:
 
@@ -278,7 +278,7 @@ This is going to save all of my work logs into the `work-log.org` file using the
 
 This is my dumping ground for trivial pieces of information. Things like the password for the supply closet door, where I left that obscure part that I will need one day, or some important piece of trivia that I keep having to look up. There are no tags, filtering, or automatic-anything here. This is the most basic Org Mode example I can think of and I'm including it here mainly for reference.
 
-[random notes screenshot](images/random-notes-screenshot.png)
+![random notes screenshot](images/random-notes-screenshot.png)
 
 Here is the capture template:
 
@@ -316,7 +316,7 @@ And then all of the notes captured from that would go into that heading.
 
 Now we are getting to the heart of what makes Org Mode so amazing, the ability to track TODO items! To fully explore this feature is going to require several configurations, however I am going to start off with a simple "General To-Do" item and then layer more functionality onto it in later steps. In the Agenda section we will review how to organize all of our TODOs, but right now we are focusing on simply creating them.
 
-[general tasks screenshot](file:///home/jstoup/org/images/general-tasks-screenshot.png)
+![general tasks screenshot](file:///home/jstoup/org/images/general-tasks-screenshot.png)
 
 We are going to look at one TODO in particular.
 
