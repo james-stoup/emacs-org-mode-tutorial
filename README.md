@@ -1,39 +1,39 @@
 
 # Table of Contents
 
-1.  [The Beautiful Nightmare that is Org Mode](#org71b303a)
-    1.  [Why learning Org Mode is so hard](#org72d4730)
-2.  [Workflows](#org7a2ed94)
-    1.  [How this guide is trying to solve these problems](#orgc8bc92c)
-    2.  [Understanding workflows](#org3201645)
-        1.  [Understanding your workflow options](#orge9b5494)
-        2.  [Figuring out your first workflow](#orgd93b974)
-3.  [Configuring Org](#org5e18e8f)
-    1.  [Before you start](#orgec4eef0)
-    2.  [Default settings](#org17f46ff)
-    3.  [Configuration #1 - Work Log](#org8db505c)
-        1.  [Capture Template](#orgc61dd8e)
-    4.  [Configuration #2 - Simple Note](#org29e6d60)
-        1.  [Capture Template](#org12042d5)
-    5.  [Configuration #3 - General TODO](#org5920824)
-        1.  [Components of the TODO Item](#orgf95e5eb)
-        2.  [Explanation of the TODO Workflow](#orgb083abf)
-        3.  [Capture Template](#orgf28d918)
-        4.  [Org States](#orgc556a65)
-    6.  [Configuration #4 - Programmer TODO](#org7b8b471)
-        1.  [Tracking Bugs](#org4877dbd)
-    7.  [Configuration #5 - Meetings](#org9989588)
-    8.  [](#org4458dda)
+1.  [The Beautiful Nightmare that is Org Mode](#org51d288f)
+    1.  [Why learning Org Mode is so hard](#orge0552ef)
+2.  [Workflows](#org53c7504)
+    1.  [How this guide is trying to solve these problems](#org4b1d9d2)
+    2.  [Understanding workflows](#org5a9ffbe)
+        1.  [Understanding your workflow options](#orgf7e4468)
+        2.  [Figuring out your first workflow](#orgc2dd49d)
+3.  [Configuring Org](#org46d45f3)
+    1.  [Before you start](#org9d45e5f)
+    2.  [Default settings](#org7a4b552)
+    3.  [Configuration #1 - Work Log](#orgd6deeda)
+        1.  [Capture Template](#orge08fb3b)
+    4.  [Configuration #2 - Simple Note](#org81564e2)
+        1.  [Capture Template](#orgccfeae3)
+    5.  [Configuration #3 - General TODO](#orgeb1d20a)
+        1.  [Components of the TODO Item](#orgb4100d3)
+        2.  [Explanation of the TODO Workflow](#orgb7a538b)
+        3.  [Capture Template](#org0c6b851)
+        4.  [Org States](#orgc41810c)
+    6.  [Configuration #4 - Programmer TODO](#orgbf3b00b)
+        1.  [Tracking Bugs](#org4e35062)
+    7.  [Configuration #5 - Meetings](#org516c3ad)
+    8.  [](#org71cf269)
 
 
-<a id="org71b303a"></a>
+<a id="org51d288f"></a>
 
 # The Beautiful Nightmare that is Org Mode
 
 So you want to learn ogr mode? Well god help you. Welcome to the circus.
 
 
-<a id="org72d4730"></a>
+<a id="orge0552ef"></a>
 
 ## Why learning Org Mode is so hard
 
@@ -57,14 +57,14 @@ Other tools might have a setup wizard, sample configurations, or other tutorials
 As a senior software engineer it took me almost 6 months of working with Org Mode before I was happy with the results. In my initial 2 months I was barely productive with it because I didn't understand what it could do and, more importantly, I didn't know what I wanted it to do. I feel like most people who try to use Org Mode find it to be so frustrating due to its complexity that they  ultimately give up on it entirely. And this is a shame because this is a fascinatingly useful piece of software.
 
 
-<a id="org7a2ed94"></a>
+<a id="org53c7504"></a>
 
 # Workflows
 
 The part that everyone skips over. Org Mode was so difficult for me to learn because I started this process backwards. I started trying to use it before having any idea of what I actually wanted it to do. 
 
 
-<a id="orgc8bc92c"></a>
+<a id="org4b1d9d2"></a>
 
 ## How this guide is trying to solve these problems
 
@@ -75,7 +75,7 @@ This guide tries to help you discover a workflow that best suits you. Then a few
 So, let's dig into the problem.
 
 
-<a id="org3201645"></a>
+<a id="org5a9ffbe"></a>
 
 ## Understanding workflows
 
@@ -96,7 +96,7 @@ When thinking of your own workflow, start off by filling in the sentence "I want
 Before you can write any configuration code or really get any use out of Org Mode you need to clearly define your goals.
 
 
-<a id="orge9b5494"></a>
+<a id="orgf7e4468"></a>
 
 ### Understanding your workflow options
 
@@ -106,7 +106,7 @@ But not today. Today is going to be different.
 
 So let's start off the right way by first brainstorming some ideas on how you want this whole thing to work. Initially you should focus only on establishing the simplest version of your own workflow. Go into this assuming that this is going to change and that nothing here is set in stone. Instead, treat this as a first draft that will get thrown away, redesigned, or heavily modified as you further understand what it is you really hope to get out of Org Mode. Look through the following list and see if any of these things are something you would want to integrate into your new Org Mode workflow.
 
-Common Workflow Components
+**Common Workflow Components**
 
 -   handling emails
 -   recording meeting notes
@@ -129,7 +129,7 @@ And so on and so on.
 As a side note, something that took me a while to wrap my head around was that not everything has to be interconnected. So if you want to keep a journal, there is no reason that it has to be integrated into anything else. Where as you might want to keep your meetings in one file, your TODOs in another, and reference both of them in your agenda view.
 
 
-<a id="orgd93b974"></a>
+<a id="orgc2dd49d"></a>
 
 ### Figuring out your first workflow
 
@@ -137,11 +137,11 @@ So at this point you should take a look at the list above (which is by no means 
 
 Once you figure out what you want to do, starting thinking of the simplest way that you would like to reorganize your workflow to incorporate org mode. For example, don't do this:
 
-"what are all the steps required to interface with my email client, import my emails, tag them, create TODO's from them, and then sort them in my Agenda View&#x2026;"
+*"what are all the steps required to interface with my email client, import my emails, tag them, create TODO's from them, and then sort them in my Agenda View&#x2026;"/*
 
 and instead do this:
 
-"I want to make TODOs based on my email"
+*"I want to make TODOs based on my email"*
 
 Note that the second one doesn't require any fancy configuration. Of course, this means that there are going to be a lot of manual steps, BUT THAT IS OK! So in this example, imagine that you come up with the following work flow:
 
@@ -162,21 +162,21 @@ I feel you, I really do. But we aren't there yet. This step is all about seeing 
 Unfortunately there is no shortcut here. You just have to try a bunch of things out and see what clicks for you. Everyone has different needs and this is most definitely not a one-size-fits-all type of solution. But the key here is to try different approaches, do it all manually so you have minimal investment (think of how frustrating it would have been to spend 10 hours configuring your mail settings only to never use it), and then refine the parts that work for you.
 
 
-<a id="org5e18e8f"></a>
+<a id="org46d45f3"></a>
 
 # Configuring Org
 
-Now we get to the heart of things.
+Now we get to the heart of things. Listed below are a series of steps that should, at the very least, be read in order. Not every configuration depends on the ones before it, but many do. So while I've tried to encapsulate these as much as possible, you should still read through everything first before you begin modifying your configuration.
 
 
-<a id="orgec4eef0"></a>
+<a id="org9d45e5f"></a>
 
 ## Before you start
 
 So you have looked at my list, maybe picked a few pieces out you want to try, thought about how your own workflow should work and now you are ready to configure org. Ok, let's do this. First, if you have not done so, you should check out [Org Mode Quickstart Guide](https://orgmode.org/quickstart.html). It's ok if you haven't memorized all of this yet, just keep that page open in your browser and reference it until things start to make more sense. Also, it is really going to help if you have some working knowledge of emacs configuration. You can muscle your way through this if this is your first time, but this is definitely not the package you want to be your introduction to Emacs.
 
 
-<a id="org17f46ff"></a>
+<a id="org7a4b552"></a>
 
 ## Default settings
 
@@ -202,6 +202,11 @@ Listed below are some default settings that I use for Org Mode to make my life e
     ;; Remap the change priority keys to use the UP or DOWN key
     (define-key org-mode-map (kbd "C-c <up>") 'org-priority-up)
     (define-key org-mode-map (kbd "C-c <down>") 'org-priority-down)
+    
+    ;; Shortcuts for storing links, viewing the agenda, and starting a capture
+    (define-key global-map "\C-cl" 'org-store-link)
+    (define-key global-map "\C-ca" 'org-agenda)
+    (define-key global-map "\C-cc" 'org-capture)
     
     ;; When you want to change the level of an org item, use SMR
     (define-key org-mode-map (kbd "C-c C-g C-r") 'org-shiftmetaright)
@@ -240,7 +245,7 @@ I really like how this makes my layout look, but your mileage may vary so that's
 Change the height multipliers to suite your own tastes. This is what works for me, but you may want them larger or smaller. Either way, put all of that into your .emacs file, relaunch emacs and let's roll.
 
 
-<a id="org8db505c"></a>
+<a id="orgd6deeda"></a>
 
 ## Configuration #1 - Work Log
 
@@ -255,7 +260,7 @@ So here is what I want:
 And here is the code that needed to make this work:
 
 
-<a id="orgc61dd8e"></a>
+<a id="orge08fb3b"></a>
 
 ### Capture Template
 
@@ -272,7 +277,7 @@ When the capture template is initiated the capture key should be "j". I set it t
 This is going to save all of my work logs into the `work-log.org` file using the date structure shown in the picture above. For details on how to modify that structure look up `org-capture-templates` in the manual. 
 
 
-<a id="org29e6d60"></a>
+<a id="org81564e2"></a>
 
 ## Configuration #2 - Simple Note
 
@@ -283,7 +288,7 @@ This is my dumping ground for trivial pieces of information. Things like the pas
 Here is the capture template:
 
 
-<a id="org12042d5"></a>
+<a id="orgccfeae3"></a>
 
 ### Capture Template
 
@@ -300,7 +305,12 @@ If you wanted to use this along with the work log capture template from above, t
 No date structure needed here, just a long list of random notes. If you wanted to use the same file but add another heading called "Door Codes" you could then configure another capture template like so: 
 
     (setq org-capture-templates
-          '(    
+          '(
+            ("n" "Note"
+             entry (file+headline "~/org/notes.org" "Random Notes")
+             "** %?"
+             :empty-lines 0)
+    
             ("d" "Door Codes"
              entry (file+headline "~/org/notes.org" "Door Codes")
              "** %?"
@@ -310,13 +320,13 @@ No date structure needed here, just a long list of random notes. If you wanted t
 And then all of the notes captured from that would go into that heading. 
 
 
-<a id="org5920824"></a>
+<a id="orgeb1d20a"></a>
 
 ## Configuration #3 - General TODO
 
 Now we are getting to the heart of what makes Org Mode so amazing, the ability to track TODO items! To fully explore this feature is going to require several configurations, however I am going to start off with a simple "General To-Do" item and then layer more functionality onto it in later steps. In the Agenda section we will review how to organize all of our TODOs, but right now we are focusing on simply creating them.
 
-![general tasks screenshot](file:///home/jstoup/org/images/general-tasks-screenshot.png)
+![general tasks screenshot](images/general-tasks-screenshot.png)
 
 We are going to look at one TODO in particular.
 
@@ -338,7 +348,7 @@ There is a lot going on here so I'm going to break it down in the various compon
       NOTE ABOUT TODO
 
 
-<a id="orgf95e5eb"></a>
+<a id="orgb4100d3"></a>
 
 ### Components of the TODO Item
 
@@ -373,14 +383,14 @@ Let's look at each piece one at a time.
     And here is where all the details go. This could be much more involved, but for this example it was reduced to a single line. so
 
 
-<a id="orgb083abf"></a>
+<a id="orgb7a538b"></a>
 
 ### Explanation of the TODO Workflow
 
 The general idea behind all of this is to capture a TODDO item, assign it a priority, and save a detailed description of what needs to be done. Once that is recorded we can revisit this TODO at a later date and begin working on it. Once work has begun the state changes to "IN-PROGRESS". When that happens the user is prompted to write a small note (this is not required, you could leave it blank) and a timestamp is recorded of when the state change happened. Finally, once the work has been completed, the note can be set to a done state. In these examples the done states are `DONE`, `OBE`, and `WONT-DO`. But we are getting ahead of ourselves. First let's look at how this was accomplished.
 
 
-<a id="orgf28d918"></a>
+<a id="org0c6b851"></a>
 
 ### Capture Template
 
@@ -395,7 +405,7 @@ A general TODO item is captured with a "g" from the capture template buffer. All
           ))
 
 
-<a id="orgc556a65"></a>
+<a id="orgc41810c"></a>
 
 ### Org States
 
@@ -428,14 +438,14 @@ Finally, if you have been following along, editing your own config file to match
 That is it for TODOs. Save your config, reload, and test everything out. Tweak things until you like the colors and such. Now that we've gotten all the easy stuff out of the way, let's move on to more complex things.
 
 
-<a id="org7b8b471"></a>
+<a id="orgbf3b00b"></a>
 
 ## Configuration #4 - Programmer TODO
 
 I'm including this as a separate section because I don't want to confuse people who came here looking for help but aren't themselves programmers. I was going to include this in the previous section but I felt that had already grown too long as it is. With that in mind, here are some features that really only other programmers will care about.
 
 
-<a id="org4877dbd"></a>
+<a id="org4e35062"></a>
 
 ### Tracking Bugs
 
@@ -456,7 +466,7 @@ As a programmer I do all my development in Emacs. Regardless of the language, I 
     By adding this in you can navigate to the exact line of code you want to reference and then create this 
 
 
-<a id="org9989588"></a>
+<a id="org516c3ad"></a>
 
 ## Configuration #5 - Meetings
 
@@ -467,7 +477,7 @@ For the first part, the planning and all that, I just use Microsoft's Outlook. N
 However the second part, that is something that Org excels at. Now this one is going to be a lot more complex than the previous two configurations, so pay close attention to the various moving parts.
 
 
-<a id="org4458dda"></a>
+<a id="org71cf269"></a>
 
 ## 
 
