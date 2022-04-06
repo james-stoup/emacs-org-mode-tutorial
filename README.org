@@ -436,7 +436,7 @@ A clock display is just an overlay for quickly viewing how much time has been sp
 
 And with more details:
 
-[[file:images/meeting-detailed-clock-screenshot.png][!detailed clock view]]
+![[file:images/meeting-detailed-clock-screenshot.png][detailed clock view]]
 
 This is a quick and easy way to keep track of how much time is being spent on various meetings.
 
