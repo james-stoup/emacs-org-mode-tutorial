@@ -421,15 +421,15 @@ When the capture is over and everything gets saved to the file, you can revisit 
 
 A key takeaway from all of this is that tags are applied at the base level of this meeting and that everything that is part of that meeting inherits those tags. So the TODO item I made inherits the tags ~:meeting:~ as well as ~:james:~. If I wanted to add an addition tag to one of the TODOs under ~Action Items~ then that TODO would have 3 tags while the meeting would only have 2. Speaking of tags, I should probably explain that next.
 
-*** Clock Reports
+*** Clocking Time
 One very useful aspect of Org Mode is the ability to clock in and out of tasks to track time. In the capture template for a meeting the clock-in value has been set to true which starts the clock when the meeting is created and ends when the capture template is closed and the meeting is presumably over. This metadata is saved in the ~:LOGBOOK:~ section of the meeting. Having this data allows us to track our time visually using two commands, ~org-clock-report~ and ~org-clock-display~.
 
-**** Clock Report
+*Clock Reports*
 A clock report gets generated with ~org-clock-report~ and inserted into your file. This value is not dynamic but rather is set when the command is executed. This is useful for viewing metrics of past events as it allows you to easily summarize the time spent in meetings. This feature of Org Mode is useful when you require more concrete metrics on how your time is spent. Perhaps you need to track time for billing or time allocation for a project. If so, this feature can make your life much easier. Here is an example of a clock report for three weeks of my meetings.
 
 ![[file:images/meetings-clock-report-screenshot.png][clock report]]
 
-**** Clock Display
+*Clock Display*
 A clock display is just an overlay for quickly viewing how much time has been spent on various entries and can be viewed by executing  ~org-clock-display~. It looks like this:
 
 ![[file:images/meeting-clock-time-overview-screenshot.png][clock overview]]
