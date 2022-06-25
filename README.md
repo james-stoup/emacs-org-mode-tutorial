@@ -1,58 +1,59 @@
 
 # Table of Contents
 
-1.  [The Beautiful Nightmare that is Org Mode](#org5ad87e5)
-    1.  [Why learning Org Mode is so hard](#org1711c9e)
-    2.  [How to use this guide](#org44a9e44)
-2.  [Workflows](#org307947e)
-    1.  [How this guide is trying to solve these problems](#org7bc8b70)
-    2.  [Understanding workflows](#orgcd617cb)
-        1.  [Understanding your workflow options](#org3dd1c3a)
-        2.  [Figuring out your first workflow](#org26b8ddc)
-3.  [Configuring Capture Templates](#org90f6e98)
-    1.  [Before you start](#orgd5dece6)
-    2.  [Default settings](#org450c1f4)
-    3.  [Packages to install](#org814b279)
-    4.  [Configuration #1 - Work Log](#org2e2da0b)
-        1.  [Capture Template](#org5f278b7)
-    5.  [Configuration #2 - Simple Note](#org7564cbd)
-        1.  [Capture Template](#org2fb5e96)
-    6.  [Configuration #3 - General TODO](#org746ca6b)
-        1.  [Components of the TODO Item](#orgcf438c8)
-        2.  [Explanation of the TODO Workflow](#org23f7d2d)
-        3.  [Capture Template](#org4b8562d)
-        4.  [Org States](#org585c134)
-    7.  [Configuration #4 - Programmer TODO](#orgb9e3264)
-        1.  [Tracking Bugs](#orgcb5be01)
-        2.  [Capture Template](#org856d9b5)
-    8.  [Configuration #5 - Meetings](#org6b25b1f)
-        1.  [Capture Template](#orgb132792)
-        2.  [Clocking Time](#org6e1de9c)
-4.  [Tags](#org335fa24)
-    1.  [Create groups of tags](#orgcaccf25)
-    2.  [Start small](#orgabd5e98)
-    3.  [Multiple tags are better than a super descriptive tag](#org7f26090)
-    4.  [Defining tags](#orgd436db6)
-    5.  [Colorizing tags](#org259a1fd)
-5.  [Basic Agenda Usage](#orgb5fd5ff)
-    1.  [Agenda Weekly View](#org73f3fc5)
-    2.  [Agenda TODO View](#orga5fd6d3)
-6.  [Enhanced Agenda #1](#org5b5ecec)
-    1.  [Agenda Enhanced View](#org659255f)
-    2.  [Agenda Custom Command](#org2e2bc95)
-7.  [Enhanced Agenda #2](#orgc9de944)
-    1.  [Agenda Custom Command](#orgbf8565a)
-8.  [Final Thoughts](#org96716d2)
+1.  [The Beautiful Nightmare that is Org Mode](#org56377d5)
+    1.  [Why learning Org Mode is so hard](#org2b559c9)
+    2.  [How to use this guide](#orgbac8993)
+2.  [Workflows](#orgf85f151)
+    1.  [How this guide is trying to solve these problems](#org1f67048)
+    2.  [Understanding workflows](#org15e744d)
+        1.  [Personal Workflow Example](#org541b337)
+        2.  [Understanding your workflow options](#org32de651)
+        3.  [Figuring out your first workflow](#orga715fba)
+3.  [Configuring Capture Templates](#org866128a)
+    1.  [Before you start](#orgae38c5c)
+    2.  [Default settings](#orga70c740)
+    3.  [Packages to install](#org10e3376)
+    4.  [Configuration #1 - Work Log](#org6797146)
+        1.  [Capture Template](#org0e0da60)
+    5.  [Configuration #2 - Simple Note](#org505909e)
+        1.  [Capture Template](#orgd5926ae)
+    6.  [Configuration #3 - General TODO](#org06c21b3)
+        1.  [Components of the TODO Item](#orgc154e4e)
+        2.  [Explanation of the TODO Workflow](#orgc49466d)
+        3.  [Capture Template](#org3710007)
+        4.  [Org States](#org8459920)
+    7.  [Configuration #4 - Programmer TODO](#org5da7e10)
+        1.  [Tracking Bugs](#orgda9fe3a)
+        2.  [Capture Template](#org18aea34)
+    8.  [Configuration #5 - Meetings](#org6a3fcac)
+        1.  [Capture Template](#org3ff207a)
+        2.  [Clock Reports](#orga7aacf3)
+4.  [Tags](#orgc157736)
+    1.  [Create groups of tags](#orgc6378e0)
+    2.  [Start small](#org70101df)
+    3.  [Multiple tags are better than a super descriptive tag](#org1848405)
+    4.  [Defining tags](#org0a2450b)
+    5.  [Colorizing tags](#orga63a848)
+5.  [Basic Agenda Usage](#orga8e42aa)
+    1.  [Agenda Weekly View](#org9cb5aae)
+    2.  [Agenda TODO View](#org1054d10)
+6.  [Enhanced Agenda #1](#orgf000a42)
+    1.  [Agenda Enhanced View](#org366fcab)
+    2.  [Agenda Custom Command](#orgd080503)
+7.  [Enhanced Agenda #2](#orge87093a)
+    1.  [Agenda Custom Command](#org0342fb0)
+8.  [Final Thoughts](#org6533bf2)
 
 
-<a id="org5ad87e5"></a>
+<a id="org56377d5"></a>
 
 # The Beautiful Nightmare that is Org Mode
 
 This document is a walkthrough for new Org Mode users that will show how to create an initial configuration that is both productive and easy to understand. This is the guide I wish I had found when I first started learning Org Mode. I needed an explanation that tied together a user's workflow, the Org Mode features that support that workflow, a screenshot of what that looks like, and the code to make it all happen. Hopefully this guide will help you in your journey of mastering Org Mode.
 
 
-<a id="org1711c9e"></a>
+<a id="org2b559c9"></a>
 
 ## Why learning Org Mode is so hard
 
@@ -63,7 +64,7 @@ That sentiment is, to put it bluntly, bullshit.
 Other tools might have a setup wizard, sample configurations, or other tutorials to ease you into the software. However Org Mode is designed to be an open ended framework within which you the user can construct your ideal workflow. In this regards it is simpler to think of Org Mode as a programming language within Emacs. It is no wonder than adoption of this tool is so difficult. If you aren't already a programmer (one with lisp experience no less) you will find Org Mode has a brutal learning curve.
 
 
-<a id="org44a9e44"></a>
+<a id="orgbac8993"></a>
 
 ## How to use this guide
 
@@ -72,14 +73,14 @@ If you are new to Org Mode, I would highly recommend reading the Workflows secti
 There is a lot here and this is only a small fraction of what Org Mode is capable of. Take small steps and don't get discouraged. Good luck.
 
 
-<a id="org307947e"></a>
+<a id="orgf85f151"></a>
 
 # Workflows
 
 The part that everyone skips over. Org Mode was so difficult for me to learn because I started this process backwards. I started trying to use it before having any idea of what I actually wanted it to do. 
 
 
-<a id="org7bc8b70"></a>
+<a id="org1f67048"></a>
 
 ## How this guide is trying to solve these problems
 
@@ -90,28 +91,31 @@ This guide tries to help you discover a workflow that best suits you. Then a few
 So, let's dig into the problem.
 
 
-<a id="orgcd617cb"></a>
+<a id="org15e744d"></a>
 
 ## Understanding workflows
 
 Most websites with Org primers offer a very detailed org configuration that supports their very specific workflow. And this is great for them, but not for your average user who might only care about 10% of that particular setup. But since it is presented as one unified whole, it can be difficult to separate out which pieces you want vs which pieces will break things for you. So before we can start writing any configuration code we need to step back and ask ourselves, what should our workflow look like?
 
-I'm going to use this term "workflow" a lot in this document and to prevent any confusion, let's clearly define it now. A workflow is the sum of all the steps you take when processing information with Org Mode. Everything you do that ultimately is meant to interact with Org Mode is part of your workflow.
+I'm going to use this term "workflow" a lot in this document and to prevent any confusion, let's clearly define it now. A workflow is the sum of all the steps you take as you take to complete a task. These steps typically involve processing information, tracking your status, organizing important details, and otherwise arranging resources in a useful and coherent manner.
 
-For example, here are two workflows, one for my personal life and one for my job:
+At this point you already have existing workflows that possibly involve email clients, calendars, sticky notes, notebooks, text messages, Word documents, or anything else you use to organize your life. Org isn't a magical fix for the complexity of life, however it does make it easier to manage that complexity. Hopefully by the end of this guide you will discover a way to integrate Org Mode into your existing routines.
 
-**Personal Workflow**
-"I want to keep a journal of my thoughts, track home projects, and plan out my personal programming endeavors."
-
-**Professional Workflow**
-"I want to track my accomplishments at work, organize the tickets I have been assigned, record data produced in meetings, summarize everything, and display metrics of my productivity."
-
-When thinking of your own workflow, start off by filling in the sentence "I want to use org mode to <span class="underline"><span class="underline"><span class="underline"><span class="underline">\_</span></span></span></span>"
-
-Before you can write any configuration code or really get any use out of Org Mode you need to clearly define your goals.
+To better illustrate workflows, here is an example from my personal life.
 
 
-<a id="org3dd1c3a"></a>
+<a id="org541b337"></a>
+
+### Personal Workflow Example
+
+I want to track home projects such as furniture I want to build, home renovations, general handy work, and future tools to buy. The usual progression of such projects tends to look something like this:
+
+`create project -> add details -> add notes -> research it -> start work on project -> finish project`
+
+So if I am going to build a new kitchen table I would create an entry on the project, add details like the dimensions, required seating, etc. Then do some research on styles (farm house vs modern) and on lumber (oak vs walnut prices). Finally once I had all the information I can create some steps (buy the lumber, dimension it, cut it, assemble it, dry fit, sand, stain, seal) so I can get a feel for how long this will take (many weekends) and then start working it.
+
+
+<a id="org32de651"></a>
 
 ### Understanding your workflow options
 
@@ -144,7 +148,7 @@ And so on and so on.
 As a side note, something that took me a while to wrap my head around was that not everything has to be interconnected. So if you want to keep a journal, there is no reason that it has to be integrated into anything else. Where as you might want to keep your meetings in one file, your TODOs in another, and reference both of them in your agenda view.
 
 
-<a id="org26b8ddc"></a>
+<a id="orga715fba"></a>
 
 ### Figuring out your first workflow
 
@@ -177,7 +181,7 @@ I feel you, I really do. But we aren't there yet. This step is all about seeing 
 Unfortunately there is no shortcut here. You just have to try a bunch of things out and see what clicks for you. Everyone has different needs and this is most definitely not a one-size-fits-all type of solution. But the key here is to try different approaches, do it all manually so you have minimal investment (think of how frustrating it would have been to spend 10 hours configuring your mail settings only to never use it), and then refine the parts that work for you.
 
 
-<a id="org90f6e98"></a>
+<a id="org866128a"></a>
 
 # Configuring Capture Templates
 
@@ -186,14 +190,14 @@ In this section you will find five different configurations that support some of
 Now we get to the heart of things. Listed below are a series of steps that should, at the very least, be read in order. Not every configuration depends on the ones before it, but many do. So while I've tried to encapsulate these as much as possible, you should still read through everything first before you begin modifying your configuration.
 
 
-<a id="orgd5dece6"></a>
+<a id="orgae38c5c"></a>
 
 ## Before you start
 
 So you have looked at my list, maybe picked a few pieces out you want to try, thought about how your own workflow should work and now you are ready to configure org. Ok, let's do this. First, if you have not done so, you should check out [Org Mode Quickstart Guide](https://orgmode.org/quickstart.html). It's ok if you haven't memorized all of this yet, just keep that page open in your browser and reference it until things start to make more sense. Also, it is really going to help if you have some working knowledge of emacs configuration. You can muscle your way through this if this is your first time, but this is definitely not the package you want to be your introduction to Emacs.
 
 
-<a id="org450c1f4"></a>
+<a id="orga70c740"></a>
 
 ## Default settings
 
@@ -201,6 +205,18 @@ Listed below are some default settings that I use for Org Mode to make my life e
 
 **Default Org Mode Settings**
 
+    ;; Setup use-package just in case everything isn't already installed
+    (unless (package-installed-p 'use-package)
+      (package-refresh-contents)
+      (package-install 'use-package))
+    
+    ;; Enable use-package
+    (eval-when-compile
+      (require 'use-package))
+    (setq use-package-always-ensure t)
+    (use-package org
+      :pin gnu)
+    
     ;; Must do this so the agenda knows where to look for my files
     (setq org-agenda-files '("~/org"))
     
@@ -263,7 +279,7 @@ I really like how this makes my layout look, but your mileage may vary so that's
 Change the height multipliers to suite your own tastes. This is what works for me, but you may want them larger or smaller. Either way, put all of that into your .emacs file, relaunch emacs and let's roll.
 
 
-<a id="org814b279"></a>
+<a id="org10e3376"></a>
 
 ## Packages to install
 
@@ -273,7 +289,7 @@ I am using a variety of packages to make all of this work so here is a list if y
 -   comment-tags
 
 
-<a id="org2e2da0b"></a>
+<a id="org6797146"></a>
 
 ## Configuration #1 - Work Log
 
@@ -288,7 +304,7 @@ So here is what I want:
 And here is the code that needed to make this work:
 
 
-<a id="org5f278b7"></a>
+<a id="org0e0da60"></a>
 
 ### Capture Template
 
@@ -305,7 +321,7 @@ When the capture template is initiated the capture key should be "j". I set it t
 This is going to save all of my work logs into the `work-log.org` file using the date structure shown in the picture above. For details on how to modify that structure look up `org-capture-templates` in the manual. 
 
 
-<a id="org7564cbd"></a>
+<a id="org505909e"></a>
 
 ## Configuration #2 - Simple Note
 
@@ -316,7 +332,7 @@ This is my dumping ground for trivial pieces of information. Things like the pas
 Here is the capture template:
 
 
-<a id="org2fb5e96"></a>
+<a id="orgd5926ae"></a>
 
 ### Capture Template
 
@@ -348,7 +364,7 @@ No date structure needed here, just a long list of random notes. If you wanted t
 And then all of the notes captured from that would go into that heading. 
 
 
-<a id="org746ca6b"></a>
+<a id="org06c21b3"></a>
 
 ## Configuration #3 - General TODO
 
@@ -376,7 +392,7 @@ There is a lot going on here so I'm going to break it down in the various compon
       NOTE ABOUT TODO
 
 
-<a id="orgcf438c8"></a>
+<a id="orgc154e4e"></a>
 
 ### Components of the TODO Item
 
@@ -404,14 +420,14 @@ When work was started on this TODO and the state changed, a note was added as a 
 And here is where all the details go. This could be much more involved, but for this example it was reduced to a single line.
 
 
-<a id="org23f7d2d"></a>
+<a id="orgc49466d"></a>
 
 ### Explanation of the TODO Workflow
 
 The general idea behind all of this is to capture a TODO item, assign it a priority, and save a detailed description of what needs to be done. Once that is recorded we can revisit this TODO at a later date and begin working on it. Once work has begun the state changes to `IN-PROGRESS`. When that happens the user is prompted to write a small note (this is not required, you could leave it blank) and a timestamp is recorded of when the state change happened. Finally, once the work has been completed, the note can be set to a done state. In these examples the done states are `DONE`, `OBE`, and `WONT-DO`. But we are getting ahead of ourselves. First let's look at how this was accomplished.
 
 
-<a id="org4b8562d"></a>
+<a id="org3710007"></a>
 
 ### Capture Template
 
@@ -426,7 +442,7 @@ A general TODO item is captured with a `g` from the capture template buffer. All
           ))
 
 
-<a id="org585c134"></a>
+<a id="org8459920"></a>
 
 ### Org States
 
@@ -459,21 +475,21 @@ Finally, if you have been following along, editing your own config file to match
 That is it for TODOs. Save your config, reload, and test everything out. Tweak things until you like the colors and such. Now that we've gotten all the easy stuff out of the way, let's move on to more complex things.
 
 
-<a id="orgb9e3264"></a>
+<a id="org5da7e10"></a>
 
 ## Configuration #4 - Programmer TODO
 
 I'm including this as a separate section because I don't want to confuse people who came here looking for help but aren't themselves programmers. I was going to include this in the previous section but I felt that had already grown too long as it is. With that in mind, here are some features that really only other programmers will care about.
 
 
-<a id="orgcb5be01"></a>
+<a id="orgda9fe3a"></a>
 
 ### Tracking Bugs
 
 As a programmer I do all my development in Emacs. Regardless of the language, I have it open at all times. And so there are plenty of times that I will be scanning through some source code and see something that I want to fix. If it is relatively trivial I will just leave a comment in the code with a note saying someone should come back and fix this in the future. However, frequently I'll see something that is considerably more involved. Maybe I just found an edge case that wasn't previously being handled or some tricky chunk of code that I just spent 20 min figuring out and I don't want to have to go through all of that again in 3 months when I finally get a chance to refactor it. It is in cases like this where it is extremely handy to capture the location of the bug and store it inside my TODO item. Here is what I mean.
 
 
-<a id="org856d9b5"></a>
+<a id="org18aea34"></a>
 
 ### Capture Template
 
@@ -492,7 +508,7 @@ This capture must be executed on the line of code you want to link to. When you 
 Of course you could do this with any text file, not just code. If you were writing a book and wanted to mark a particular passage that you wanted to come back to later and rewrite, this would do nicely for you.
 
 
-<a id="org6b25b1f"></a>
+<a id="org6a3fcac"></a>
 
 ## Configuration #5 - Meetings
 
@@ -517,7 +533,7 @@ Finally we see all the details of Thursday's meetings. Lots to unpack here. Ther
 But as always, let's start with the capture template.
 
 
-<a id="orgb132792"></a>
+<a id="org3ff207a"></a>
 
 ### Capture Template
 
@@ -551,39 +567,39 @@ When the capture is over and everything gets saved to the file, you can revisit 
 A key takeaway from all of this is that tags are applied at the base level of this meeting and that everything that is part of that meeting inherits those tags. So the TODO item I made inherits the tags `:meeting:` as well as `:james:`. If I wanted to add an addition tag to one of the TODOs under `Action Items` then that TODO would have 3 tags while the meeting would only have 2. Speaking of tags, I should probably explain that next.
 
 
-<a id="org6e1de9c"></a>
+<a id="orga7aacf3"></a>
 
-### Clocking Time
+### Clock Reports
 
 One very useful aspect of Org Mode is the ability to clock in and out of tasks to track time. In the capture template for a meeting the clock-in value has been set to true which starts the clock when the meeting is created and ends when the capture template is closed and the meeting is presumably over. This metadata is saved in the `:LOGBOOK:` section of the meeting. Having this data allows us to track our time visually using two commands, `org-clock-report` and `org-clock-display`.
 
-**Clock Reports**
+1.  Clock Report
 
-A clock report gets generated with `org-clock-report` and inserted into your file. This value is not dynamic but rather is set when the command is executed. This is useful for viewing metrics of past events as it allows you to easily summarize the time spent in meetings. This feature of Org Mode is useful when you require more concrete metrics on how your time is spent. Perhaps you need to track time for billing or time allocation for a project. If so, this feature can make your life much easier. Here is an example of a clock report for three weeks of my meetings.
+    A clock report gets generated with `org-clock-report` and inserted into your file. This value is not dynamic but rather is set when the command is executed. This is useful for viewing metrics of past events as it allows you to easily summarize the time spent in meetings. This feature of Org Mode is useful when you require more concrete metrics on how your time is spent. Perhaps you need to track time for billing or time allocation for a project. If so, this feature can make your life much easier. Here is an example of a clock report for three weeks of my meetings.
+    
+    ![clock report](images/meetings-clock-report-screenshot.png)
 
-![clock report](images/meetings-clock-report-screenshot.png)
+2.  Clock Display
 
-**Clock Display**
-
-A clock display is just an overlay for quickly viewing how much time has been spent on various entries and can be viewed by executing  `org-clock-display`. It looks like this:
-
-![clock overview](images/meeting-clock-time-overview-screenshot.png)
-
-And with more details:
-
-![detailed clock view](images/meeting-detailed-clock-screenshot.png)
-
-This is a quick and easy way to keep track of how much time is being spent on various meetings.
+    A clock display is just an overlay for quickly viewing how much time has been spent on various entries and can be viewed by executing  `org-clock-display`. It looks like this:
+    
+    ![clock overview](images/meeting-clock-time-overview-screenshot.png)
+    
+    And with more details:
+    
+    ![detailed clock view](images/meeting-detailed-clock-screenshot.png)
+    
+    This is a quick and easy way to keep track of how much time is being spent on various meetings.
 
 
-<a id="org335fa24"></a>
+<a id="orgc157736"></a>
 
 # Tags
 
 Before moving on to the Agenda I need to take a moment and explain tags. I've mentioned them several times previously but now I need to go into more depth on how to set them up and use them. You don't want to create too many tags or you won't use them effectively. You don't want too few or else you won't get the full impact of their use in your Agenda. Here are some general guidelines I've found for using tags effectively.
 
 
-<a id="orgcaccf25"></a>
+<a id="orgc6378e0"></a>
 
 ## Create groups of tags
 
@@ -592,7 +608,7 @@ Creating groups of tags that make sense. For example, if you are keeping track o
 Additionally you can create exclusive groups where only one tag from the group can be used at a time. To keep with our recipe example, your group could contain (breakfast, meal, dessert, drink). Which would indicate that the recipe in question must be one, and only one, of those tags. The tag does not have to be used, but if it is used, only one can be used at a time.
 
 
-<a id="orgabd5e98"></a>
+<a id="org70101df"></a>
 
 ## Start small
 
@@ -601,14 +617,14 @@ It is better to start with a small selection of tags and expand as you go, rathe
 Beating this food analogy to death, you could create tags like `:requires_open_flame:` but if you never plan on needing to filter recipes that require flambe, then what is the point? 
 
 
-<a id="org7f26090"></a>
+<a id="org1848405"></a>
 
 ## Multiple tags are better than a super descriptive tag
 
 Think of ways of combining tags to make a descriptive notation rather than relying on overly specific tags that will eventually be too constraining. If you are creating TODOs based on incoming emails, don't use a tag called `:future_project_with_kevin:` but instead do `:future_project:kevin:`. I'm sorry if that sounds obvious, but when you are first starting out with Org Mode you can find yourself slipping into bad habits because you aren't sure yet what you need and the instinct can be to just throw everything against the wall and see what sticks.
 
 
-<a id="orgd436db6"></a>
+<a id="org0a2450b"></a>
 
 ## Defining tags
 
@@ -661,7 +677,7 @@ Here are the tags I'm using for the workflow examples in this document.
 Note that the Ticket Types and the Meeting Types are both exclusive groups. A ticket can be a bug or a feature or a spike. Likewise a meeting can only have one major type. However, the rest of the tags can be combined as needed. Generally I've broken the tags into two categories, those that go on TODO items and those that do not. So a meeting might get tagged with `:meeting:backend:` because I'm having a meeting about the backend, however within that meeting I might create a TODO with the tag `:CRITICAL:@bug:` because I've just found a critical bug that needs to be fixed right away. Also the "@" you see in the tags has no special Org related significance, that is strictly something for me.
 
 
-<a id="org259a1fd"></a>
+<a id="orga63a848"></a>
 
 ## Colorizing tags
 
@@ -682,7 +698,7 @@ If it is worth doing it is worth making it pretty. That is one of my odder motto
 Doing this allows our tags to take on different colors and weights. In my opinion this is one of the most useful enhancements I have made to my setup. I find that colorful tags really helps me take in info at a glance and otherwise makes drab TODOs much more interesting.
 
 
-<a id="orgb5fd5ff"></a>
+<a id="orga8e42aa"></a>
 
 # Basic Agenda Usage
 
@@ -691,7 +707,7 @@ Before we go down this rabbit hole, and make no mistake this is a rabbit hole li
 Having said all that, let's dig into the core pieces of the Agenda View. At its simplest you will use the Agenda for two primary things, to view items with timestamps in the date view and to view TODO items in the tasking view. Everything else, all the other features, filters, enhancements, etc. are all just sitting on top of those two core pieces. Here are some examples to show you what I mean.
 
 
-<a id="org73f3fc5"></a>
+<a id="org9cb5aae"></a>
 
 ## Agenda Weekly View
 
@@ -704,7 +720,7 @@ You can see that I had a bunch of meetings that week. As a side note, those meet
 You will notice that each entry has a label to the left of it. That is the file that the entry was found in. That can be replaced with the category name if set, but since I didn't bother with that, it just defaulted to the file name. On the far right you will see some tags, they will be useful later. Now let's take a look at the TODOs view.
 
 
-<a id="orga5fd6d3"></a>
+<a id="org1054d10"></a>
 
 ## Agenda TODO View
 
@@ -723,14 +739,14 @@ Where you can clearly see all of the TODOs, ordered by priority then by file (or
 So clearly there is a lot going on here. And while you can filter this view in a variety of ways (look it up in the manual, there is too much to discuss here) to help in managing this complexity, it can still be a bit overwhelming. Let's try to make this a bit more readable.
 
 
-<a id="org5b5ecec"></a>
+<a id="orgf000a42"></a>
 
 # Enhanced Agenda #1
 
 This next view is a modified version of one that I copied from [Aaron Bieber](https://github.com/aaronbieber/dotfiles/blob/master/configs/emacs.d/lisp/init-org.el). I honestly don't recall how I ended up looking at his github config files, but he has some good stuff and I would encourage you to look at his setup at some point. Aaron, if you ever stumble across this, you rock. Thanks for the inspiration. Here is what my version looks like:
 
 
-<a id="org659255f"></a>
+<a id="org366fcab"></a>
 
 ## Agenda Enhanced View
 
@@ -739,7 +755,7 @@ This next view is a modified version of one that I copied from [Aaron Bieber](ht
 So right away we notice that this is much easier to read. Our highest priority items are at the top, the weekly Agenda view has been incorporated as well, and over all this makes for a much more readable experience. Let's look at the code that supports this.
 
 
-<a id="org2e2bc95"></a>
+<a id="orgd080503"></a>
 
 ## Agenda Custom Command
 
@@ -792,7 +808,7 @@ To add this view there are a couple of pieces required.
 Now when you bring up the Agenda selection dialog you should see the `Daily agenda and all TODOs` option that can be selected with `d`. This is a much better option than the default view and was my go-to view for a long while. However, it is still really busy and it can be difficult to find certain items as they can be buried if your list grows too long. So let's look at another solution.
 
 
-<a id="orgc9de944"></a>
+<a id="orge87093a"></a>
 
 # Enhanced Agenda #2
 
@@ -803,7 +819,7 @@ For this next Agenda configuration I'm using a packaged called [Org Super Agenda
 Well this is wild, isn't it? Things are sorted into logical groups, there aren't tags cluttering everything up, and the grouping seems more logical than just filtering by priority. What sorcery is this, you say? Well this is what the Super Agenda gives you. Read more at the link above to get the full documentation, but the gist is that you setup filters and then the super agenda applies them to your TODO items in the order you defined the filters. So in my case I set this up to filter all the critical tasks into the first bucket. If one of those critical tasks also matched a later filter (like say it required additional research or was a blocker) it would still only show up in the first bucket. Since that first bucket takes priority. If I removed the `:CRITICAL:` tag then it would filter down into a lower bucket. At the end it will display all the TODOs that don't have a filter. If there is a filter with no TODOs matching its criteria, then it just doesn't display it. So you aren't seeing my "Movies to Watch" bucket because I'm all caught up on my preferred cinema at the moment. But as soon as Marvel releases another movie, that bucket with appear. Sounds easy right? Well&#x2026;actually yeah, it is pretty straight forward once you see how it is done. Let's look at my configuration file.
 
 
-<a id="orgbf8565a"></a>
+<a id="org0342fb0"></a>
 
 ## Agenda Custom Command
 
@@ -897,7 +913,7 @@ Here are the pieces you will need for this:
 This is a good sampling of the different ways you can combine the filters to produce exactly what you are looking for. I would highly recommend you check out the Org Super Agenda documentation for further refinements, because it is a very slick tool.
 
 
-<a id="org96716d2"></a>
+<a id="org6533bf2"></a>
 
 # Final Thoughts
 

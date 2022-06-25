@@ -1,3 +1,16 @@
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+;; Enable use-package
+(eval-when-compile
+  (require 'use-package))
+
+(setq use-package-always-ensure t)
+
+(use-package org
+  :pin gnu)
+
 ;; Must do this so the agenda knows where to look for my files
 (setq org-agenda-files '("~/org"))
 

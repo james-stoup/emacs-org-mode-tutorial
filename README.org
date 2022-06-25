@@ -26,19 +26,18 @@ So, let's dig into the problem.
 ** Understanding workflows
 Most websites with Org primers offer a very detailed org configuration that supports their very specific workflow. And this is great for them, but not for your average user who might only care about 10% of that particular setup. But since it is presented as one unified whole, it can be difficult to separate out which pieces you want vs which pieces will break things for you. So before we can start writing any configuration code we need to step back and ask ourselves, what should our workflow look like?
 
-I'm going to use this term "workflow" a lot in this document and to prevent any confusion, let's clearly define it now. A workflow is the sum of all the steps you take when processing information with Org Mode. Everything you do that ultimately is meant to interact with Org Mode is part of your workflow.
+I'm going to use this term "workflow" a lot in this document and to prevent any confusion, let's clearly define it now. A workflow is the sum of all the steps you take as you take to complete a task. These steps typically involve processing information, tracking your status, organizing important details, and otherwise arranging resources in a useful and coherent manner.
 
-For example, here are two workflows, one for my personal life and one for my job:
+At this point you already have existing workflows that possibly involve email clients, calendars, sticky notes, notebooks, text messages, Word documents, or anything else you use to organize your life. Org isn't a magical fix for the complexity of life, however it does make it easier to manage that complexity. Hopefully by the end of this guide you will discover a way to integrate Org Mode into your existing routines.
 
-*Personal Workflow*
-"I want to keep a journal of my thoughts, track home projects, and plan out my personal programming endeavors."
+To better illustrate workflows, here is an example from my personal life.
 
-*Professional Workflow*
-"I want to track my accomplishments at work, organize the tickets I have been assigned, record data produced in meetings, summarize everything, and display metrics of my productivity."
+*** Personal Workflow Example
+I want to track home projects such as furniture I want to build, home renovations, general handy work, and future tools to buy. The usual progression of such projects tends to look something like this:
 
-When thinking of your own workflow, start off by filling in the sentence "I want to use org mode to _________"
+~create project -> add details -> add notes -> research it -> start work on project -> finish project~
 
-Before you can write any configuration code or really get any use out of Org Mode you need to clearly define your goals.
+So if I am going to build a new kitchen table I would create an entry on the project, add details like the dimensions, required seating, etc. Then do some research on styles (farm house vs modern) and on lumber (oak vs walnut prices). Finally once I had all the information I can create some steps (buy the lumber, dimension it, cut it, assemble it, dry fit, sand, stain, seal) so I can get a feel for how long this will take (many weekends) and then start working it.
 
 *** Understanding your workflow options
 So here we are. You want to use Org Mode to do...something. You aren't totally sure what but a lot of really smart people seem to think it is useful so you want to give it a try. And so you did what most new users do. You read the startup guide, you skim the docs, you realize you don't understand anything, and shortly thereafter you gave up in despair.
@@ -110,6 +109,18 @@ Listed below are some default settings that I use for Org Mode to make my life e
 *Default Org Mode Settings*
 
 #+begin_src emacs-lisp
+  ;; Setup use-package just in case everything isn't already installed
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+
+  ;; Enable use-package
+  (eval-when-compile
+    (require 'use-package))
+  (setq use-package-always-ensure t)
+  (use-package org
+    :pin gnu)
+
   ;; Must do this so the agenda knows where to look for my files
   (setq org-agenda-files '("~/org"))
 
@@ -133,7 +144,7 @@ Listed below are some default settings that I use for Org Mode to make my life e
   (define-key global-map "\C-cl" 'org-store-link)
   (define-key global-map "\C-ca" 'org-agenda)
   (define-key global-map "\C-cc" 'org-capture)
-  
+
   ;; When you want to change the level of an org item, use SMR
   (define-key org-mode-map (kbd "C-c C-g C-r") 'org-shiftmetaright)
 
@@ -421,17 +432,15 @@ When the capture is over and everything gets saved to the file, you can revisit 
 
 A key takeaway from all of this is that tags are applied at the base level of this meeting and that everything that is part of that meeting inherits those tags. So the TODO item I made inherits the tags ~:meeting:~ as well as ~:james:~. If I wanted to add an addition tag to one of the TODOs under ~Action Items~ then that TODO would have 3 tags while the meeting would only have 2. Speaking of tags, I should probably explain that next.
 
-*** Clocking Time
+*** Clock Reports
 One very useful aspect of Org Mode is the ability to clock in and out of tasks to track time. In the capture template for a meeting the clock-in value has been set to true which starts the clock when the meeting is created and ends when the capture template is closed and the meeting is presumably over. This metadata is saved in the ~:LOGBOOK:~ section of the meeting. Having this data allows us to track our time visually using two commands, ~org-clock-report~ and ~org-clock-display~.
 
-*Clock Reports*
-
+**** Clock Report
 A clock report gets generated with ~org-clock-report~ and inserted into your file. This value is not dynamic but rather is set when the command is executed. This is useful for viewing metrics of past events as it allows you to easily summarize the time spent in meetings. This feature of Org Mode is useful when you require more concrete metrics on how your time is spent. Perhaps you need to track time for billing or time allocation for a project. If so, this feature can make your life much easier. Here is an example of a clock report for three weeks of my meetings.
 
 ![[file:images/meetings-clock-report-screenshot.png][clock report]]
 
-*Clock Display*
-
+**** Clock Display
 A clock display is just an overlay for quickly viewing how much time has been spent on various entries and can be viewed by executing  ~org-clock-display~. It looks like this:
 
 ![[file:images/meeting-clock-time-overview-screenshot.png][clock overview]]
