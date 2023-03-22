@@ -61,7 +61,7 @@ Learning Org Mode is so challenging because its complexity easily becomes overwh
 
 That sentiment is, to put it bluntly, bullshit.
 
-Other tools might have a setup wizard, sample configurations, or other tutorials to ease you into the software. However Org Mode is designed to be an open ended framework within which you the user can construct your ideal workflow. In this regards it is simpler to think of Org Mode as a programming language within Emacs. It is no wonder than adoption of this tool is so difficult. If you aren't already a programmer (one with lisp experience no less) you will find Org Mode has a brutal learning curve.
+Other tools might have a setup wizard, sample configurations, or other tutorials to ease you into the software. However Org Mode is designed to be an open ended framework within which you the user can construct your ideal workflow. In this regards it is simpler to think of Org Mode as a programming language within Emacs. It is no wonder that adoption of this tool is so difficult. If you aren't already a programmer (one with lisp experience no less) you will find Org Mode has a brutal learning curve.
 
 
 <a id="orgbac8993"></a>
