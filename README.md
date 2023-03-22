@@ -97,7 +97,7 @@ So, let's dig into the problem.
 
 Most websites with Org primers offer a very detailed org configuration that supports their very specific workflow. And this is great for them, but not for your average user who might only care about 10% of that particular setup. But since it is presented as one unified whole, it can be difficult to separate out which pieces you want vs which pieces will break things for you. So before we can start writing any configuration code we need to step back and ask ourselves, what should our workflow look like?
 
-I'm going to use this term "workflow" a lot in this document and to prevent any confusion, let's clearly define it now. A workflow is the sum of all the steps you take as you take to complete a task. These steps typically involve processing information, tracking your status, organizing important details, and otherwise arranging resources in a useful and coherent manner.
+I'm going to use this term "workflow" a lot in this document and to prevent any confusion, let's clearly define it now. A workflow is the sum of all the steps you take to complete a task. These steps typically involve processing information, tracking your status, organizing important details, and otherwise arranging resources in a useful and coherent manner.
 
 At this point you already have existing workflows that possibly involve email clients, calendars, sticky notes, notebooks, text messages, Word documents, or anything else you use to organize your life. Org isn't a magical fix for the complexity of life, however it does make it easier to manage that complexity. Hopefully by the end of this guide you will discover a way to integrate Org Mode into your existing routines.
 
